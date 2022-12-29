@@ -1,0 +1,53 @@
+while True:      # creating a loop if we want to multiple conversions...
+    print("1. Indian Rupee","2. Pounds","3. Euros","4. US Dollar","5. Canadian Dollar","6. Chinese Yuan","7. Russia's Rubal",sep="\n",) 
+    first_currency=input("Enter the index of first currency: ")
+    dict1={"1":"Indian Rupee","2":"Pounds","3":"Euros","4":"US Dollar","5":"Canadian Dollar","6":"Chinese Yuan","7":"Russia's Rubal"}   # creating a dictionary with num keys mapped to currency values...
+    second_currency=input("Enter the index for the second currency: ")     
+    print("Enter the amount in ",dict1[first_currency],": ",sep="",end="")      #using the dictionary key to get to currency name...
+    currency_1=float(input())
+    print("The amount in ",dict1[second_currency],": ",sep="",end="")
+    currency_2=1
+    if first_currency == "1":  # Converting the currency into Indian Rupees...
+        currency_1 *=1
+    elif first_currency=="2":
+        currency_1*=95.509
+    elif first_currency=="3":
+        currency_1*=81.344
+    elif first_currency=="4":
+        currency_1*=79.8635
+    elif first_currency=="5":
+        currency_1*=61.8283
+    elif first_currency=="6":
+        currency_1*=11.8025
+    elif first_currency=="7":
+        currency_1*=1.3945
+    if second_currency=="1":  # Converting the Indian Rupees into desired currency...
+        currency_2= currency_1*1
+    elif second_currency=="2":
+        currency_2= currency_1*0.0105
+    elif second_currency=="3":
+        currency_2= currency_1*0.0123
+    elif second_currency=="4":
+        currency_2= currency_1*0.0125
+    elif second_currency=="5":
+        currency_2= currency_1*0.0162
+    elif second_currency=="6":
+        currency_2= currency_1*0.0847
+    elif second_currency=="7":
+        currency_2= currency_1*0.7171
+    print(currency_2)
+    print("Do you want to do another conversion ?","\n","If yes write 'Yes', otherwise 'No'")    # confirming whether to do another conversion or not
+    another_conversion=input()
+    if another_conversion=="No" or another_conversion=="no":
+        print("Thanks for using our service")
+        break
+    elif another_conversion!="No" or another_conversion!="Yes" or another_conversion!="no" or another_conversion!="yes" :
+        print("Please tell us more accurately what to do ")
+    print("Let's try once again:","\n","Do you want to do another conversion ?", "\n", "If yes write 'Yes', otherwise 'No'")
+    another_conversion = input()
+    if another_conversion == "No" or another_conversion == "no":
+        print("Thanks for using our service")
+        break
+    elif another_conversion != "No" or another_conversion != "Yes" or another_conversion != "no" or another_conversion != "yes":
+        print("If you wish to to more conversions please rerun the program")
+        break
